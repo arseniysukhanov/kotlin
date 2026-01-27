@@ -1,8 +1,8 @@
 //RUN_PIPELINE_TILL: FRONTEND
 
 fun testExpressionWithStrangeType(value: Boolean){
-        var test = 0
-        test=when(value){
+        var test:Int
+        test<!ASSIGNMENT_TYPE_MISMATCH!>=<!>when(value){
         true -> test = 3
         false -> 0
     }

@@ -120,6 +120,11 @@ Test if expression `when` can be used to define a value with different type depe
  * expressionWithStrangeType3.kt
     - Both frontends show error.
 
+Test if expression `when` can be used with empty brackets.
+
+ * expressionEmpty.kt
+    - Both frontends show error.
+
 ## Runtime tests
 Directory: compiler/testData/codegen/box/when\_new
 

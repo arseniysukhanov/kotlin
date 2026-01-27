@@ -1,7 +1,7 @@
 // FIR_IDENTICAL
 //RUN_PIPELINE_TILL: BACKEND
 
-fun testExpressionWithRange(value:Int) {
+fun testExpressionWithRange(value: Int) {
     val test = when (value) {
         in 1..10 -> "0<value<11"
         in 11..20 -> "10<value<21"

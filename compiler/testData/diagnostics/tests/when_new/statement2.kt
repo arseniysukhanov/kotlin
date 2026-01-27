@@ -1,15 +1,15 @@
 // FIR_IDENTICAL
 // RUN_PIPELINE_TILL: BACKEND
-class A(test:String){
-    var test=""
-    fun print(text:String){
-        test=text
+class A(test: String) {
+    var test = ""
+    fun print(text: String) {
+        test = text
     }
 }
 
-fun statementTest(a:A){
+fun statementTest(a: A) {
     val value = 2
-    when (value){
+    when (value) {
         1 -> a.print("One")
         2 -> a.print("Two")
         3 -> a.print("Three")

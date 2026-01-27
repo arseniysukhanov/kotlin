@@ -1,8 +1,8 @@
 // FIR_IDENTICAL
 //RUN_PIPELINE_TILL: BACKEND
 
-fun testExpressionWithStrangeType(value: Boolean){
-    val test=when(value){
+fun testExpressionWithStrangeType(value: Boolean) {
+    val test = when (value) {
         true -> "True"
         false -> 0
     }

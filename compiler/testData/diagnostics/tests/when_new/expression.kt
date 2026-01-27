@@ -1,14 +1,12 @@
 // FIR_IDENTICAL
 // RUN_PIPELINE_TILL: BACKEND
-fun expressionTest(){
-    var test:String
-    val value=2
-
-    test = when(value){
-        1-> "one"
-        2-> "two"
-        3-> "three"
-        else-> "something"
+fun expressionTest() {
+    val value = 2
+    var test: String = when (value) {
+        1 -> "one"
+        2 -> "two"
+        3 -> "three"
+        else -> "something"
     }
 }
 

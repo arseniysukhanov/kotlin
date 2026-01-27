@@ -1,7 +1,7 @@
 //RUN_PIPELINE_TILL: FRONTEND
 
-fun testExpressionWithRange(value:Int) {
-    val chars='a'..'c'
+fun testExpressionWithRange(value: Int) {
+    val chars = 'a'..'c'
     val test = when (value) {
         in 1..10 -> "0<value<11"
         <!ARGUMENT_TYPE_MISMATCH!>in chars<!> -> "Error"

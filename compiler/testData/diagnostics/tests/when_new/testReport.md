@@ -30,12 +30,7 @@ Same as previous but checks if expression `when` would work with variable which 
 Test if expression `when` works without else if all cases are covered.
 
  * expressionNoElse.kt
-    - Does work with a previous version of frontend but not with the new one
-
-Test if expression `when` works without else if all cases are covered, but this time it is less obvious. It checs if variable is bigger than 0.5 or less that 0.5, without accounting for it being equal to 0.5, but because checked value is `Integer` it still covers all cases.
-
- * expressionNoElse2.kt
-    - Does work with a previous version of frontend but not with the new one.
+    - Does not work for both frontends.
 
 Test if expression `when` works without else if all cases are covered and checked value is a `Enum`.
 
@@ -123,7 +118,7 @@ Test if expression `when` can be used to define a value with different type depe
 Test if expression `when` can be used to define a value with different type depending on conditions. Here I have tried the same thing, however the variable which I was assigning was also assigned inside when with a value but this time with a variable of the same type.
 
  * expressionWithStrangeType3.kt
-    - Both frontends show error however errors a bit strange, they both say that there is type mismatch which is not exactly the case in my opinion. So I would say that error messages here are not correct even though it probably makes sense that should not be compiled.
+    - Both frontends show error.
 
 ## Runtime tests
 Directory: compiler/testData/codegen/box/when\_new
@@ -139,3 +134,7 @@ Test if expression `when` works.
 In other languages similar structure to `when` often checks all options even if one already was executed, so this test checks if after finding first correct option `when` slips into the next correct one.
 
  * expressionSlip.kt
+
+Test if `else` in statement `when` works.
+
+ * statementElse.kt

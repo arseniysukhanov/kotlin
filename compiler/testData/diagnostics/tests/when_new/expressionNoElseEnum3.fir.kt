@@ -1,17 +1,17 @@
 // RUN_PIPELINE_TILL: BACKEND
 // LANGUAGE: +ContextSensitiveResolutionUsingExpectedType
 
-enum class Direction{
-    NORTH,EAST,SOUTH,WEST
+enum class Direction {
+    NORTH, EAST, SOUTH, WEST
 }
 
-fun enumTest(){
-    val direction=Direction.SOUTH
-    val test = when(direction){
-        NORTH-> "North"
-        SOUTH-> "South"
-        EAST-> "East"
-        WEST-> "West"
+fun enumTest() {
+    val direction = Direction.SOUTH
+    val test = when (direction) {
+        NORTH -> "North"
+        SOUTH -> "South"
+        EAST -> "East"
+        WEST -> "West"
     }
 }
 

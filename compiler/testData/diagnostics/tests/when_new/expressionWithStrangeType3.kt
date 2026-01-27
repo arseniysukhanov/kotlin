@@ -1,8 +1,8 @@
 //RUN_PIPELINE_TILL: FRONTEND
 
-fun testExpressionWithStrangeType(value: Boolean){
-        var <!ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE!>test<!>:Int
-        test=when(value){
+fun testExpressionWithStrangeType(value: Boolean) {
+    var <!ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE!>test<!>: Int
+    test = when (value) {
         true -> <!TYPE_MISMATCH!>test = 3<!>
         false -> 0
     }

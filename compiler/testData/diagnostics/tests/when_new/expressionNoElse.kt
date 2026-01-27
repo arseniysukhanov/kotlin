@@ -1,11 +1,10 @@
+// FIR_IDENTICAL
 // RUN_PIPELINE_TILL: FRONTEND
-fun expressionTest(){
-    var test:String
-    val value=2
-
-    test = when{//new frontend does not see that all possibilities are checked
-        value<1-> "less one"
-        value>=1-> "no less than one"
+fun expressionTest() {
+    val value = 2
+    var test: String = <!NO_ELSE_IN_WHEN!>when<!> {//new frontend does not see that all possibilities are checked
+        value < 1 -> "less one"
+        value >= 1 -> "no less than one"
     }
 }
 

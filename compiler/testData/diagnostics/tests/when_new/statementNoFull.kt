@@ -1,10 +1,14 @@
 // FIR_IDENTICAL
 // RUN_PIPELINE_TILL: BACKEND
-fun statementTest(){
+fun statementTest() {
     val value = 2
-    when (value){
-        1 -> {val test ="One"}
-        2 -> {val test ="Two"}
+    when (value) {
+        1 -> {
+            val test = "One"
+        }
+        2 -> {
+            val test = "Two"
+        }
     }
 }
 

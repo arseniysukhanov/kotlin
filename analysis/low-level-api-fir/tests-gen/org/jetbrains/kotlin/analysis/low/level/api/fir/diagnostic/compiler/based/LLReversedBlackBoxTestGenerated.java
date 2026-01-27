@@ -67215,4 +67215,32 @@ public class LLReversedBlackBoxTestGenerated extends AbstractLLReversedBlackBoxT
       }
     }
   }
+
+  @Nested
+  @TestMetadata("compiler/testData/codegen/box/when_new")
+  @TestDataPath("$PROJECT_ROOT")
+  public class When_new {
+    @Test
+    public void testAllFilesPresentInWhen_new() {
+      KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/when_new"), Pattern.compile("^(.+)\\.kt$"), null, true);
+    }
+
+    @Test
+    @TestMetadata("expression.kt")
+    public void testExpression() {
+      runTest("compiler/testData/codegen/box/when_new/expression.kt");
+    }
+
+    @Test
+    @TestMetadata("expressionSlip.kt")
+    public void testExpressionSlip() {
+      runTest("compiler/testData/codegen/box/when_new/expressionSlip.kt");
+    }
+
+    @Test
+    @TestMetadata("statement.kt")
+    public void testStatement() {
+      runTest("compiler/testData/codegen/box/when_new/statement.kt");
+    }
+  }
 }

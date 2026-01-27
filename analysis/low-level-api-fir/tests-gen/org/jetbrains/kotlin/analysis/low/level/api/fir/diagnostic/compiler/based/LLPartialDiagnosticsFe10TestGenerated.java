@@ -49483,6 +49483,70 @@ public class LLPartialDiagnosticsFe10TestGenerated extends AbstractLLPartialDiag
         }
       }
     }
+
+    @Nested
+    @TestMetadata("compiler/testData/diagnostics/tests/when_new")
+    @TestDataPath("$PROJECT_ROOT")
+    public class When_new {
+      @Test
+      public void testAllFilesPresentInWhen_new() {
+        KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/diagnostics/tests/when_new"), Pattern.compile("^(.+)\\.(kt|kts)$"), Pattern.compile("^(.+)\\.(reversed|partialBody|fir|ll|latestLV)\\.kts?$"), true);
+      }
+
+      @Test
+      @TestMetadata("expression.kt")
+      public void testExpression() {
+        runTest("compiler/testData/diagnostics/tests/when_new/expression.kt");
+      }
+
+      @Test
+      @TestMetadata("expressionNoElse.kt")
+      public void testExpressionNoElse() {
+        runTest("compiler/testData/diagnostics/tests/when_new/expressionNoElse.kt");
+      }
+
+      @Test
+      @TestMetadata("expressionNoElse2.kt")
+      public void testExpressionNoElse2() {
+        runTest("compiler/testData/diagnostics/tests/when_new/expressionNoElse2.kt");
+      }
+
+      @Test
+      @TestMetadata("expressionNoFull.kt")
+      public void testExpressionNoFull() {
+        runTest("compiler/testData/diagnostics/tests/when_new/expressionNoFull.kt");
+      }
+
+      @Test
+      @TestMetadata("expressionNoFull2.kt")
+      public void testExpressionNoFull2() {
+        runTest("compiler/testData/diagnostics/tests/when_new/expressionNoFull2.kt");
+      }
+
+      @Test
+      @TestMetadata("expressionWithoutSubject.kt")
+      public void testExpressionWithoutSubject() {
+        runTest("compiler/testData/diagnostics/tests/when_new/expressionWithoutSubject.kt");
+      }
+
+      @Test
+      @TestMetadata("statement.kt")
+      public void testStatement() {
+        runTest("compiler/testData/diagnostics/tests/when_new/statement.kt");
+      }
+
+      @Test
+      @TestMetadata("statement2.kt")
+      public void testStatement2() {
+        runTest("compiler/testData/diagnostics/tests/when_new/statement2.kt");
+      }
+
+      @Test
+      @TestMetadata("statementNoFull.kt")
+      public void testStatementNoFull() {
+        runTest("compiler/testData/diagnostics/tests/when_new/statementNoFull.kt");
+      }
+    }
   }
 
   @Nested

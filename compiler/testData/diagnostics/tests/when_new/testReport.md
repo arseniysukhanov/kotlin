@@ -19,6 +19,11 @@ Test that statement `when` with some cases being not covered works.
 
  * statementNoFull.kt
 
+Test if statement `when` works without any options at all.
+
+ * statementNoOptions.kt
+    - Both frontends work.
+
 Test that expression `when` with some cases being not covered doesn't work.
 
  * expressionNoFull.kt
@@ -26,6 +31,16 @@ Test that expression `when` with some cases being not covered doesn't work.
 Same as previous but checks if expression `when` would work with variable which can be null.
 
  * expressionNoFull2.kt
+
+Test if expression `when` works without any options at all.
+
+ * expressionNoOptions.kt
+    - Both frontends show error.
+
+Test if expression `when` works with only `else` option.
+
+ * expressionOnlyElse.kt
+    - Both frontends work.
 
 Test if expression `when` works without else if all cases are covered.
 
@@ -123,6 +138,11 @@ Test if expression `when` can be used to define a value with different type depe
 Test if expression `when` can be used with empty brackets.
 
  * expressionEmpty.kt
+    - Both frontends show error.
+
+Test if expression `when` can be used without else with `enum`, however one of the options also has a guard condition
+
+ * expressionNoElseEnumGuard.kt
     - Both frontends show error.
 
 ## Runtime tests

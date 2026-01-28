@@ -140,10 +140,15 @@ Test if expression `when` can be used with empty brackets.
  * expressionEmpty.kt
     - Both frontends show error.
 
-Test if expression `when` can be used without else with `enum`, however one of the options also has a guard condition
+Test if expression `when` can be used without else with `enum`, however one of the options also has a guard condition.
 
  * expressionNoElseEnumGuard.kt
     - Both frontends show error.
+      
+ Test if expression `when` can be used without else with `enum`, however one of the options also has a guard condition. This test is still exhaustive.
+
+ * expressionNoElseEnumGuard2.kt
+    - Only old frontend shows an error, because it does not support guard conditions with `enum`.
 
 ## Runtime tests
 Directory: compiler/testData/codegen/box/when\_new
